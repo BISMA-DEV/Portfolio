@@ -7,14 +7,13 @@ let navbar = document.querySelector('.navbar ');
 menuicon.onclick = () => {
     menuicon.classList.toggle('bx-x');
     navbar.classList.toggle('active');
-};
-
-// scroll section active links//
-let sections = document.querySelectorAll('section');
-let navlinks = document.querySelectorAll('header nav a');
-
-window.onscroll = () => {
-    sections.forEach(sec => {
+    
+    // scroll section active links//
+    let sections = document.querySelectorAll('section');
+    let navlinks = document.querySelectorAll('header nav a');
+    
+    window.onscroll = () => {
+        sections.forEach(sec => {
         let top = window.scrollY;
         let offset = sec.offsetTop - 150;
         let height = sec.offsetHeight;
@@ -28,6 +27,9 @@ window.onscroll = () => {
             });
         };
     });
+};
+   
+
     
     // sticky navbar//
     let header = document.querySelector('header');
